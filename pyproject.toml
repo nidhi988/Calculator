@@ -1,0 +1,49 @@
+[tool.briefcase]
+project_name = "Calculator"
+bundle = "com.example"
+version = "0.0.1"
+url = "https://example.com/MyCalculator"
+license = "BSD license"
+author = 'Nidhi'
+author_email = "nidhifab77@gmail.com"
+
+[tool.briefcase.app.MyCalculator]
+formal_name = "Calculator"
+description = "my first application"
+icon = "src/MyCalculator/resources/MyCalculator"
+sources = ['src/MyCalculator']
+requires = []
+
+
+[tool.briefcase.app.MyCalculator.macOS]
+requires = [
+    'toga-cocoa>=0.3.0.dev20',
+]
+
+[tool.briefcase.app.MyCalculator.linux]
+requires = [
+    'toga-gtk>=0.3.0.dev20',
+]
+system_requires = [
+    'libgirepository1.0-dev',
+    'libcairo2-dev',
+    'libpango1.0-dev',
+    'libwebkitgtk-3.0-0',
+    'gir1.2-webkit-3.0',
+]
+
+[tool.briefcase.app.MyCalculator.windows]
+requires = [
+    'toga-winforms>=0.3.0.dev20',
+]
+
+# Mobile deployments
+[tool.briefcase.app.MyCalculator.iOS]
+requires = [
+    'toga-iOS>=0.3.0.dev20',
+]
+
+[tool.briefcase.app.MyCalculator.android]
+requires = [
+    'toga-android>=0.3.0.dev20',
+]
